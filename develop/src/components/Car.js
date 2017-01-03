@@ -2,7 +2,7 @@ import React from 'react';
 
 const Car = (props) => {
     const style = {
-        "animation": `infinite-spinning 750ms steps(${props.speed / 5}) infinite`
+        "animation": `infinite-spinning 750ms steps({props.speed / 5}) infinite`
     }
     return (
         <div className="tesla_holder">
