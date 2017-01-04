@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+.wrapper {
+  width: 1050px;
+  margin: 0 auto;
+  padding: 0 0 10px 0;
+}
+
+h1 {
+  font-family: 'Roboto';
+  font-weight: 100;
+  font-size: 38px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+header {
+  padding: 15px 0;
+  text-align: center;
+  background-color: #222;
+}
+
+.tesla_holder {
+  width: 1050px;
+  margin: 80px auto;
+}
+
+.tesla_car-white {
+  width: 100%;
+  min-height: 350px;
+  position: relative;
+  margin: 0 auto;
+  background: url("./assets/tesla.jpg") no-repeat top center;
+  background-size: contain;
+}
+
+.tesla_car {
+  width: 555px;
+  height: 247px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.tesla_car-wheels {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  background: url("./assets/wheel-19.png");
+  background-size: cover;
+  background-position: 0 0;
+  animation: infinite-spinning 250ms steps(6) infinite;
+}
+
+.tesla_car-wheels_left {
+  left: 53px;
+}
+
+.tesla_car-wheels_right {
+  right: 69px;
+}
+
+.controlers_holder {
+  width: 690px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+.controlers-input_box {
+  display: inline-block;
+}
+
+.controlers-input_container {
+  width: 230px;
+  margin-right: 40px;
+}
+
+.controlers-header_text {
+  letter-spacing: 2px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.controlers-input {
+  position: relative;
+  width: 100%;
+  height: 65px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 18px 0 0 30px;
+  margin: 0 8px 0 0;
+  background-color: #f7f7f7;
+  background-position: 24.21053% 9px;
+  background-repeat: no-repeat;
+  background-size: 44px;
+}
+
+.controlers-input p {
+  font-family: 'Roboto';
+  font-size: 25px;
+  line-height: 25px;
+  font-weight: 400;
+  position: relative;
+}
+
+.controlers-input p span {
+  position: absolute;
+  top: -5px;
+  left: 45px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.controlers-buttons {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+}
+
+.controlers-buttons button {
+  outline: 0;
+  width: 30px;
+  color: #008dff;
+  cursor: pointer;
+  display: block;
+  padding: 11px 0;
+  vertical-align: middle;
+  border: 0;
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.controlers-buttons button:first-child {
+  border-bottom: 1px solid #fff;
+  background-image: url(assets/counter/up.svg);
+}
+
+.controlers-buttons button:last-child {
+  background-image: url(assets/counter/down.svg);
+}
+
+.tesla_climate-control {
+  
+}
+
+.tesla_climate {
+  cursor: pointer;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-right: 40px;
+  border: 6px solid #f7f7f7;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  color: #666;
+  background: #fff;
+}
+
+.tesla_climate p {
+  margin: 14px 0 0;
+  text-align: center;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.tesla_climate.on {
+  color: #fff;
+  background: #33a0ff;
+  background: -webkit-linear-gradient(#33a0ff 0%, #388bff 100%);
+}
+
+.tesla_climate.heat.on {
+  background: linear-gradient(to bottom, #d64800 0%, #d20200 100%);
+}
+
+.tesla_climate.heat .tesla_climate-icon {
+  background-image: url(assets/climate/heat-on.svg);
+  animation: none;
+}
+
+.tesla_climate-icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin: 8px auto 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(assets/climate/ac-off.svg);
+}
+
+.tesla_climate-icon.on {
+  background-image: url(assets/climate/ac-on.svg);
+  animation: infinite-spinning 500ms steps(6) infinite;
+}
+
+.stats {
+  margin: -50px 0 50px;
+}
+
+.stats_ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.stats_ul li {
+  width: calc(100% / 6);
+  padding-right: 50px;
+  border-right: 1px solid #ccc;
+  justify-content: space-between;
+}
+
+.stats_ul li:last-child {
+  border-right: 0;
+}
+
+.stats-icon {
+  height: 20px;
+  background-size: auto 13px;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.stats_ul li p {
+  font-size: 40px;
+  font-weight: normal;
+  font-family: 'Roboto';
+  display: block;
+  padding: 0 18px 0 0;
+  position: relative;
+  color: #008dff;
+  text-align: right;
+}
+
+.stats_ul li p:before {
+  font-size: 14px;
+  font-weight: normal;
+  font-family: 'Roboto';
+  content: 'km';
+  position: absolute;
+  top: 8px;
+  right: 0;
+}
+
+.icon-60 {
+  background-image: url(assets/models/60.svg);
+}
+
+.icon-60D {
+  background-image: url(assets/models/60d.svg);
+}
+
+.icon-75 {
+  background-image: url(assets/models/75.svg);
+}
+
+.icon-75D {
+  background-image: url(assets/models/75d.svg);
+}
+
+.icon-90D {
+  background-image: url(assets/models/90d.svg);
+}
+
+.icon-P100D {
+  background-image: url(assets/models/p100d.svg);
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.warning {
+  padding: 30px 0;
+  font-size: 14px;
+  color: #d20200;
+  text-align: center;
+}
+
+@keyframes infinite-spinning {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
