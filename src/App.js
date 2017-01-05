@@ -12,14 +12,12 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleHeating = this.handleHeating.bind(this);
   }
-
   state = {
     "speed": 50,
     "temperature": 20,
     "heating": "ac",
     "heatingOn": false
   }
-
   handleChange(stateName, number) {
     var heating = this.state.temperature <= 0 ? "heat" : "ac";
     this.setState({
@@ -27,13 +25,11 @@ class App extends Component {
       "heating": heating
     });
   }
-
   handleHeating(heating) {
     this.setState({
       "heatingOn": heating
     });
   }
-
   render() {
     return (
       <div className="App">

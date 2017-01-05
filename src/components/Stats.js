@@ -42,4 +42,9 @@ class Stats extends React.Component {
     }
 }
 
+Stats.propTypes = {
+    temperature: React.PropTypes.number,
+    speed: React.PropTypes.number
+}
+
 export default Stats;

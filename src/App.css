@@ -6,8 +6,14 @@
   box-sizing: border-box;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 body {
-  font-family: "Roboto";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .wrapper {
@@ -98,7 +104,6 @@ header {
   height: 65px;
   border: 1px solid #ccc;
   display: inline-block;
-  padding: 18px 0 0 30px;
   margin: 0 8px 0 0;
   background-color: #f7f7f7;
   background-position: 24.21053% 9px;
@@ -106,20 +111,41 @@ header {
   background-size: 44px;
 }
 
+.controlers-input:hover {
+  background-color: #fffff8;
+  cursor: text;
+}
+
 .controlers-input p {
   font-family: 'Roboto';
   font-size: 25px;
   line-height: 25px;
   font-weight: 400;
+  padding: 20px;
   position: relative;
 }
 
 .controlers-input p span {
   position: absolute;
-  top: -5px;
-  left: 45px;
+  top: 15px;
+  left: 55px;
   font-size: 12px;
   text-transform: uppercase;
+}
+
+.controlers-input input[type=number] {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  background-color: rgba(255, 255, 255, .8);
+  border: 0;
+  padding: 10px;
+  font-size: 22px;
+}
+
+.controlers-input:hover,
+.controlers-input input[type=number] {
+  border: 1px solid #388bff;
 }
 
 .controlers-buttons {
@@ -135,7 +161,6 @@ header {
   cursor: pointer;
   display: block;
   padding: 11px 0;
-  vertical-align: middle;
   border: 0;
   background-size: 60%;
   background-position: center;
@@ -150,10 +175,6 @@ header {
 
 .controlers-buttons button:last-child {
   background-image: url(assets/counter/down.svg);
-}
-
-.tesla_climate-control {
-  
 }
 
 .tesla_climate {
